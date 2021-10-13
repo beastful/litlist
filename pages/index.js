@@ -18,7 +18,7 @@ export default function Home() {
       <h1 className="font-semibold text-xl text-center mt-6 mb-2">
         Простой генератор списка литературы
       </h1>
-      <div className="font-semibold text-sm text-gray-500 text-center mb-10">Выберете категорию работы и нажмите "Создать список"</div>
+      <div className="font-semibold text-sm text-gray-500 text-center mb-10">Выберете категорию работы и нажмите &quot;Создать список&quot;</div>
       <div className="flex">
         <select
           className="w-full px-4 py-2 border-2 border-gray-300 rounded mr-4"
