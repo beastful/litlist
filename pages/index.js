@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import getLitList from "../lib/litlist";
 
 export default function Home() {
@@ -18,7 +18,9 @@ export default function Home() {
       <h1 className="font-semibold text-xl text-center mt-6 mb-2">
         Простой генератор списка литературы
       </h1>
-      <div className="font-semibold text-sm text-gray-500 text-center mb-10">Выберете категорию работы и нажмите &quot;Создать список&quot;</div>
+      <div className="font-semibold text-sm text-gray-500 text-center mb-10">
+        Выберете категорию работы и нажмите &quot;Создать список&quot;
+      </div>
       <div className="flex">
         <select
           className="w-full px-4 py-2 border-2 border-gray-300 rounded mr-4"
@@ -929,7 +931,15 @@ export default function Home() {
       {list !== null ? (
         <div className="mt-4">
           {list.map((s) => (
-            <div className="mb-4 pb-4 font-medium border-b-2 border-fuchsia-600" key={Math.random()}>{s}</div>
+            <div
+              className="mb-4 pb-4 font-medium border-b-2 border-fuchsia-600"
+              key={Math.random()}
+            >
+              {s}
+              <div className="pt-2">
+                <a className="text-blue-600" href={"https://www.google.com/search?q=" + encodeURIComponent(s)}>Поиск в Google</a>
+              </div>
+            </div>
           ))}
         </div>
       ) : (
@@ -940,3 +950,4 @@ export default function Home() {
     </div>
   );
 }
+
